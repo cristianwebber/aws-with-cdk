@@ -25,16 +25,16 @@ step to activate your virtualenv.
 $ source .venv/bin/activate
 ```
 
-If you are a Windows platform, you would activate the virtualenv like this:
-
-```
-% .venv\Scripts\activate.bat
-```
-
 Once the virtualenv is activated, you can install the required dependencies.
 
 ```
 $ pip install -r requirements.txt
+```
+
+Or with poetry with:
+
+```
+$ poetry install
 ```
 
 At this point you can now synthesize the CloudFormation template for this code.
@@ -56,3 +56,13 @@ command.
  * `cdk docs`        open CDK documentation
 
 Enjoy!
+
+
+TODO
+
+- Find a big dataset to test the stack 
+- Create modules for each service using cdk
+- Change airflow deploy from MWAA to ECS or maybe Kubernetes
+- Test EMR instead of Databricks
+- Remove hardcoded variables
+- Add mypy and isort libraries
